@@ -1,0 +1,49 @@
+name: Bug report (English)
+description: Report a problem with UXHD.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your report.
+        Whether an issue is fixed or addressed depends on the support received. A fix or response timeline is not guaranteed.
+        Do not include personal information or credentials.
+  - type: input
+    id: version
+    attributes:
+      label: UXHD version
+      placeholder: "For example, 0.4.5.7"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include your Windows, FFXIV and OBS or Discord versions, and any overlays in use.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Describe the launch order, sharing method and actions that trigger the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the exact error message, if any.
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots or logs (optional)
+      description: Attach relevant screenshots or logs. Logs are under MainCore/Logs inside the extracted application folder. Remove personal information and credentials first.

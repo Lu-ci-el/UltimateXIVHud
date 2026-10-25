@@ -1,89 +1,108 @@
-# UltimateXIVHud (UXHD)
+# UltimateXIVHud（UXHD）
 
-[日本語の説明書](README.ja.md)
+[English](README.en.md)
 
-UltimateXIVHud helps you share FINAL FANTASY XIV through OBS and Discord while keeping supported third-party overlays out of the captured image. Your own game view keeps those overlays, and the game's normal HUD remains in the shared image.
+UltimateXIVHudは、FINAL FANTASY XIVの画面をOBSやDiscordで共有するときに、対応する外部オーバーレイを配信映像から除くためのアプリです。自分のゲーム画面ではオーバーレイを表示したまま使えます。ゲーム本来のHUDは共有映像にも残ります。
 
-## Download
+## ダウンロード
 
-[Download Release 0.4.5.6](https://github.com/Lu-ci-el/UltimateXIVHud/releases/download/v0.4.5.6/UltimateXIVHud_0.4.5.6.zip) · [Release page](https://github.com/Lu-ci-el/UltimateXIVHud/releases/tag/v0.4.5.6)
+現在、ポータブル版Releaseを準備中です。旧版の配布は取り下げました。
 
-## What it does
+## できること
 
-UXHD supplies a clean game image to these five output paths:
+次の5つの出力経路へ、オーバーレイ描画前のゲーム映像を渡します。
 
-| Application | Output |
+| アプリ | 出力 |
 | --- | --- |
-| OBS Studio | Game Capture |
-| Discord | Screen-share preview |
-| Discord | Live screen share |
-| Discord PTB | Screen-share preview |
-| Discord PTB | Live screen share |
+| OBS Studio | ゲームキャプチャ |
+| Discord | 画面共有のプレビュー |
+| Discord | 実際の画面共有・配信 |
+| Discord PTB | 画面共有のプレビュー |
+| Discord PTB | 実際の画面共有・配信 |
 
-The capture paths handle supported Minion and Dalamud overlays. UXHD has connection paths for environments with and without GShade. Compatibility depends on the game, overlay and capture application versions; check the actual preview and stream before using a new combination. A connection indicator alone does not confirm what viewers see.
+対応するMinion・Dalamudのオーバーレイを除外します。GShadeがある環境と、ない環境の接続経路を備えています。ゲーム・オーバーレイ・キャプチャアプリの組み合わせや版によって動作が変わるため、新しい環境ではプレビューと実際の配信を確認してください。接続ランプだけでは、視聴者に見える映像までは確認できません。
 
-UXHD does not hide the entire FFXIV HUD. Desktop-wide capture and capture applications outside the list above are not covered by these five paths.
+FFXIVのHUD全体を消す機能ではありません。デスクトップ全体のキャプチャや、上表以外のアプリは、この5経路の対象には含まれません。
 
-## Requirements
+## 必要な環境
 
-- Windows x64, the DirectX 11 version of FFXIV, and the .NET 8 Desktop Runtime (x64).
-- The full Release package, extracted together into one folder.
-- This build uses `G:\Documents\FFXIV\UXHD` for settings and runtime data. That drive and folder must be available and writable.
+- Windows x64、DirectX 11版FFXIV、.NET 8 Desktop Runtime（x64）。
+- Release ZIPをすべて同じフォルダーへ展開した状態。
+- 書き込み可能なフォルダーへ解凍してください。設定・ログ・キャッシュ・一時ファイルは解凍先のフォルダー内に保存します。特定のドライブは必要ありません。
 
-Do not run the executable directly from the ZIP. Keep the included DLLs, runtime files, `release.manifest.json` and `release.manifest.sig` together. UXHD checks its release signature and file hashes at startup.
+ZIPの中から直接EXEを起動しないでください。付属DLL・実行用ファイル・`release.manifest.json`・`release.manifest.sig`は一緒に置きます。起動時にRelease署名と各ファイルのハッシュを確認します。
 
-## Getting started
+## 使い方
 
-1. Extract `UltimateXIVHud_0.4.5.6.zip` and run `UltimateXIVHud.exe`.
-2. Start FFXIV, or leave your already running game open. UXHD detects the game and checks its build and startup stability automatically. You can also start UXHD after the game.
-3. Wait for the FF14 connection indicator. A new game build takes longer because UXHD performs additional checks before enabling capture hooks.
-4. Select FFXIV in OBS Game Capture or in the game/window sharing controls of Discord or Discord PTB.
-5. Check both the preview and the actual output. Confirm that the overlays you want to exclude are absent and the normal game image is present.
+1. `UltimateXIVHud_0.4.5.7.zip` を展開し、`UltimateXIVHud.exe` を起動します。
+2. FFXIVを起動します。すでに起動中なら、そのまま利用できます。UXHDを後から起動した場合も、ゲームを検出して版と起動の安定状態を自動で確認します。
+3. FF14の接続表示を待ちます。初めて確認するゲームの版では、キャプチャ処理を有効にする前に追加確認を行うため時間がかかります。
+4. OBSのゲームキャプチャ、またはDiscord・Discord PTBのゲーム／ウィンドウ共有でFFXIVを選択します。
+5. プレビューと実際の出力を確認します。除外したいオーバーレイが映っていないことと、ゲーム映像が正常に映っていることを確認してください。
 
-Release connects automatically. The language selector does not reconnect the game or restart capture. Only one UXHD application instance can run at a time.
+Releaseは自動で接続します。言語を切り替えても、ゲームへの再接続やキャプチャの再起動は行いません。UXHDは同時に1つだけ起動できます。
 
-## Language and settings
+## 言語と設定
 
-Use the **日本語 / English** selector at the top of the window. The Release interface switches immediately and remembers your choice for the next launch. Japanese is the default.
+ウィンドウ上部の **日本語 / English** でRelease画面の言語を切り替えます。表示はその場で切り替わり、次回起動にも引き継がれます。初期設定は日本語です。
 
-The setting is saved in:
+以下の保存先はすべて、`UltimateXIVHud.exe` がある解凍先フォルダーを基準にしています。言語設定は次のファイルに保存します。
 
 ```text
-G:\Documents\FFXIV\UXHD\MainCore\Settings\release_ui.json
+MainCore\Settings\release_ui.json
 ```
 
-The Settings page displays the application name, version, credits and three links: **Support (お布施)**, **Ko-fi**, and **GitHub**. Donations are optional. GitHub opens this application's repository.
+設定画面にはアプリ名・版・作者情報と、**お布施・Ko-fi・GitHub**の3つのリンクがあります。支援は任意です。GitHubは、このアプリのリポジトリを開きます。
 
-The language selector is available in Release only. Developer tools and diagnostics belong to the separate Debug build.
+言語切替はRelease限定です。開発ツールや診断機能は別のDebug版にあります。
 
-## Connection states
+## 接続表示の見方
 
-| State | Meaning |
+| 表示 | 意味 |
 | --- | --- |
-| Waiting | The game, application or capture path is not ready yet. |
-| Found | UXHD detected it; capture readiness has not yet been confirmed. |
-| Absent (GShade) | GShade is not loaded. GShade is optional. |
-| Active / Ready | The corresponding connection or protection state is active. Verify the actual captured image too. |
-| Off | A previously observed connection has ended. |
-| Warning / Stopped / Quarantined | A connection or compatibility check needs attention. Read the detail shown in the window. |
-| Restart required | UXHD requests a fresh FFXIV process before retrying. Restart the game yourself when convenient. |
+| 待機 | ゲーム・対象アプリ・キャプチャ経路の準備を待っています。 |
+| 検出 | 対象を検出しています。映像出力の準備完了とは別の状態です。 |
+| なし（GShade） | GShadeを使っていません。GShadeは必須ではありません。 |
+| 接続・保護中 | 対応する接続・保護状態が有効です。実際の映像も確認してください。 |
+| 切断 | それまで確認できていた接続が終了しました。 |
+| 警告・停止・隔離 | 接続や互換性の確認で問題がありました。画面の詳細表示を確認してください。 |
+| 再起動待ち | 新しいFFXIVプロセスでの再確認が必要です。都合のよいときに自分でゲームを再起動してください。 |
 
-If the game is waiting, let startup finish. If a warning remains, retain its exact text and the logs under `G:\Documents\FFXIV\UXHD\MainCore\Logs`. If the signature check fails, extract a complete original Release package again. Keep individual files from different versions separate.
+起動直後の待機は、ゲームの準備完了を待ってください。警告が続くときは表示された内容をそのまま控え、`MainCore\Logs` のログを残してください。署名の確認に失敗した場合は、正規のRelease ZIPをすべて展開し直します。異なる版のファイルを混ぜないでください。
 
-## Changes in 0.4.5.6
+## 0.4.5.7の変更
 
-- Keeps the recent capture performance improvements.
-- Fixes black previews when the source image briefly stops updating.
-- Automatically connects when UXHD is started after FFXIV.
+- 設定・ログ・キャッシュ・一時ファイル・ネイティブ処理用ファイルを、解凍先のアプリフォルダー配下へ統一しました。
+- 任意のドライブやフォルダーへ解凍して利用できます。
+- 日本語と英語の説明書をZIPに同梱しました。
+- キャプチャの改善と、FFXIVの起動後にUXHDを起動した場合の自動接続を維持しています。
 
-Performance depends on your environment and capture settings; no fixed in-game FPS is guaranteed.
+旧版のデータは自動で移動・取り込みしません。新しいZIPを、書き込み可能な新しいフォルダーへすべて解凍してください。更新後にゲームの再起動が必要と表示された場合は、FFXIVを再起動してから利用してください。
 
-## Credits and links
+## 利用・配信について
 
-| Role | Name |
+本アプリの利用・配信は、ご自身の責任でお願いします。配信前にプレビューと実際の出力を確認し、意図した映像が共有されていることを確かめてください。動作やオーバーレイの対応状況は利用環境によって変わります。
+
+## 不具合報告
+
+[不具合を報告する](https://github.com/Lu-ci-el/UltimateXIVHud/issues/new?template=bug_report_ja.yml)
+
+アプリのバージョン、利用環境、再現手順、期待した動作と実際の動作を記入してください。必要に応じて画面やログを添付し、個人情報・認証情報は除いてください。
+
+不具合の修正・対応は、いただいた支援の状況に応じて判断します。報告いただいても、修正や対応時期を保証するものではありません。
+
+## 支援のお願い
+
+UXHDが役に立ったら、開発・保守を続けるために支援してもらえるとうれしいです。支援は任意です。応援ありがとうございます。
+
+[お布施](https://ofuse.me/lost) · [Ko-fi](https://ko-fi.com/lost2)
+
+## 作者・リンク
+
+| 役割 | 名前 |
 | --- | --- |
 | MASTER | 𓆩†𓆪 𝕷𝖚𝖈𝖎𝖊𝖑 𓆩†𓆪 |
 | DESIGNER | 𓆩✦𓆪 ASTER 𓆩✦𓆪 |
 | DEVELOPER | 𓆩⚔𓆪 FABER 𓆩⚔𓆪 |
 
-[Support / お布施](https://ofuse.me/lost) · [Ko-fi](https://ko-fi.com/lost2) · [GitHub](https://github.com/Lu-ci-el/UltimateXIVHud)
+[お布施](https://ofuse.me/lost) · [Ko-fi](https://ko-fi.com/lost2) · [GitHub](https://github.com/Lu-ci-el/UltimateXIVHud)

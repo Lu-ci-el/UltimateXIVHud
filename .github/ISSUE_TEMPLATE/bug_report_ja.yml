@@ -1,0 +1,49 @@
+name: 不具合報告（日本語）
+description: UXHDの不具合を報告します。
+title: "[不具合] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご報告ありがとうございます。
+        修正・対応は、いただいた支援の状況に応じて判断します。修正や対応時期を保証するものではありません。
+        個人情報・認証情報を含めないでください。
+  - type: input
+    id: version
+    attributes:
+      label: UXHDのバージョン
+      placeholder: "例：0.4.5.7"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 利用環境
+      description: Windows、FFXIV、OBS・Discordなどのバージョンと、使用しているオーバーレイを記入してください。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 起動順、共有方法、問題が起きる操作を順番に記入してください。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した動作
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+      description: エラーが表示される場合は、その内容も記入してください。
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: 画面・ログ（任意）
+      description: 必要に応じて画像やログを添付してください。ログは解凍先のMainCore/Logs配下にあります。個人情報・認証情報は除いてください。
