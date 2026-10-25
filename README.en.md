@@ -6,7 +6,7 @@ UltimateXIVHud helps you share FINAL FANTASY XIV through OBS and Discord while k
 
 ## Download
 
-The portable Release is being prepared. The previous download has been withdrawn.
+[Download Release 0.4.5.7](https://github.com/Lu-ci-el/UltimateXIVHud/releases/download/v0.4.5.7/UltimateXIVHud_0.4.5.7.zip) · [Release page](https://github.com/Lu-ci-el/UltimateXIVHud/releases/tag/v0.4.5.7)
 
 ## What it does
 

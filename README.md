@@ -6,7 +6,7 @@ UltimateXIVHudは、FINAL FANTASY XIVの画面をOBSやDiscordで共有すると
 
 ## ダウンロード
 
-現在、ポータブル版Releaseを準備中です。旧版の配布は取り下げました。
+[Release 0.4.5.7をダウンロード](https://github.com/Lu-ci-el/UltimateXIVHud/releases/download/v0.4.5.7/UltimateXIVHud_0.4.5.7.zip) · [Releaseページ](https://github.com/Lu-ci-el/UltimateXIVHud/releases/tag/v0.4.5.7)
 
 ## できること
 
