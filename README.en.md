@@ -2,107 +2,49 @@
 
 [日本語](README.md)
 
-UltimateXIVHud helps you share FINAL FANTASY XIV through OBS and Discord while keeping supported third-party overlays out of the captured image. Your own game view keeps those overlays, and the game's normal HUD remains in the shared image.
+Share FFXIV through OBS, Discord or Discord PTB while keeping supported external overlays out of the captured image. The overlays remain visible on your own screen, and the game's normal HUD remains in the stream.
 
 ## Download
 
-[Download Release 0.4.5.7](https://github.com/Lu-ci-el/UltimateXIVHud/releases/download/v0.4.5.7/UltimateXIVHud_0.4.5.7.zip) · [Release page](https://github.com/Lu-ci-el/UltimateXIVHud/releases/tag/v0.4.5.7)
+[Download the latest version](https://github.com/Lu-ci-el/UltimateXIVHud/releases/download/v0.4.5.8/UltimateXIVHud_0.4.5.8.zip)
 
-## What it does
-
-UXHD supplies a clean game image to these five output paths:
-
-| Application | Output |
-| --- | --- |
-| OBS Studio | Game Capture |
-| Discord | Screen-share preview |
-| Discord | Live screen share |
-| Discord PTB | Screen-share preview |
-| Discord PTB | Live screen share |
-
-The capture paths handle supported Minion and Dalamud overlays. UXHD has connection paths for environments with and without GShade. Compatibility depends on the game, overlay and capture application versions; check the actual preview and stream before using a new combination. A connection indicator alone does not confirm what viewers see.
-
-UXHD does not hide the entire FFXIV HUD. Desktop-wide capture and capture applications outside the list above are not covered by these five paths.
-
-## Requirements
-
-- Windows x64, the DirectX 11 version of FFXIV, and the .NET 8 Desktop Runtime (x64).
-- The full Release package, extracted together into one folder.
-- Extract the app into a folder you can write to. Settings, logs, cache and temporary files stay inside this extracted folder; no particular drive is required.
-
-Do not run the executable directly from the ZIP. Keep the included DLLs, runtime files, `release.manifest.json` and `release.manifest.sig` together. UXHD checks its release signature and file hashes at startup.
+**Requirements:** Windows x64, DirectX 11 FFXIV, and .NET 8 Desktop Runtime (x64).
 
 ## Getting started
 
-1. Extract `UltimateXIVHud_0.4.5.7.zip` and run `UltimateXIVHud.exe`.
-2. Start FFXIV, or leave your already running game open. UXHD detects the game and checks its build and startup stability automatically. You can also start UXHD after the game.
-3. Wait for the FF14 connection indicator. A new game build takes longer because UXHD performs additional checks before enabling capture hooks.
-4. Select FFXIV in OBS Game Capture or in the game/window sharing controls of Discord or Discord PTB.
-5. Check both the preview and the actual output. Confirm that the overlays you want to exclude are absent and the normal game image is present.
+1. Extract the entire ZIP into a writable folder of your choice.
+2. Run `UltimateXIVHud.exe`. You can start UXHD before or after FFXIV.
+3. Wait for the automatic connection, then select FFXIV in OBS Game Capture or in Discord / Discord PTB game or window sharing.
+4. Check both the preview and the actual stream before using it.
 
-Release connects automatically. The language selector does not reconnect the game or restart capture. Only one UXHD application instance can run at a time.
+Use **日本語 / English** at the top of the window to change the language.
 
-## Language and settings
+While the app is waiting, let the game finish starting. If the app asks you to restart FFXIV, restart the game.
 
-Use the **日本語 / English** selector at the top of the window. The Release interface switches immediately and remembers your choice for the next launch. Japanese is the default.
-
-All paths below are relative to the folder containing `UltimateXIVHud.exe`. The language setting is saved in:
-
-```text
-MainCore\Settings\release_ui.json
-```
-
-The Settings page displays the application name, version, credits and three links: **Support (お布施)**, **Ko-fi**, and **GitHub**. Donations are optional. GitHub opens this application's repository.
-
-The language selector is available in Release only. Developer tools and diagnostics belong to the separate Debug build.
-
-## Connection states
-
-| State | Meaning |
-| --- | --- |
-| Waiting | The game, application or capture path is not ready yet. |
-| Found | UXHD detected it; capture readiness has not yet been confirmed. |
-| Absent (GShade) | GShade is not loaded. GShade is optional. |
-| Active / Ready | The corresponding connection or protection state is active. Verify the actual captured image too. |
-| Off | A previously observed connection has ended. |
-| Warning / Stopped / Quarantined | A connection or compatibility check needs attention. Read the detail shown in the window. |
-| Restart required | UXHD requests a fresh FFXIV process before retrying. Restart the game yourself when convenient. |
-
-If the game is waiting, let startup finish. If a warning remains, retain its exact text and the logs under `MainCore\Logs`. If the signature check fails, extract a complete original Release package again. Keep individual files from different versions separate.
-
-## Changes in 0.4.5.7
-
-- Settings, logs, cache, temporary files and native support files now stay under the folder where you extracted UXHD.
-- Works from the writable drive and folder where you choose to extract it.
-- Includes this English guide and the Japanese guide in the download ZIP.
-- Keeps the capture improvements and automatic connection when UXHD starts after FFXIV.
-
-Existing data from older versions is not moved or imported automatically. Extract the new ZIP into a fresh writable folder and keep its files together. If the app requests a game restart after an update, restart FFXIV before retrying.
+To update, extract the entire new ZIP into a separate folder. Do not run the app from inside the ZIP or mix files from different versions.
 
 ## Use and streaming
 
-Please use UXHD and stream at your own risk. Before streaming, check both the preview and the actual output to confirm that the image is what you intend to share. Performance and overlay compatibility depend on your environment.
+**Please use and stream at your own risk.** Compatibility depends on your environment. Before streaming, confirm that viewers see the image you intend to share.
+
+UXHD covers OBS Game Capture and Discord / Discord PTB previews and live sharing. Desktop-wide capture is not covered.
 
 ## Report a problem
 
 [Report a bug](https://github.com/Lu-ci-el/UltimateXIVHud/issues/new?template=bug_report_en.yml)
 
-Include the application version, your environment, steps to reproduce, expected behavior and actual behavior. Attach screenshots or logs when helpful, removing personal information and credentials first.
+Include the app version, your environment, steps to reproduce and the actual symptoms. Remove personal information and credentials from any attachments.
 
-Whether a reported issue is fixed or addressed depends on the support received. Submitting a report does not guarantee a fix or a response timeline.
+Whether an issue is fixed or addressed depends on the support received. Fixes and response timelines are not guaranteed.
 
 ## Support development
 
-If UXHD is useful to you, please consider supporting its ongoing development and maintenance. Support is optional, and we appreciate it.
+If UXHD is useful to you, please consider supporting its ongoing development and maintenance. Support is optional.
 
 [Support / お布施](https://ofuse.me/lost) · [Ko-fi](https://ko-fi.com/lost2)
 
-## Credits and links
+## Credits
 
-| Role | Name |
-| --- | --- |
-| MASTER | 𓆩†𓆪 𝕷𝖚𝖈𝖎𝖊𝖑 𓆩†𓆪 |
-| DESIGNER | 𓆩✦𓆪 ASTER 𓆩✦𓆪 |
-| DEVELOPER | 𓆩⚔𓆪 FABER 𓆩⚔𓆪 |
-
-[Support / お布施](https://ofuse.me/lost) · [Ko-fi](https://ko-fi.com/lost2) · [GitHub](https://github.com/Lu-ci-el/UltimateXIVHud)
+- MASTER: 𓆩†𓆪 𝕷𝖚𝖈𝖎𝖊𝖑 𓆩†𓆪
+- DESIGNER: 𓆩✦𓆪 ASTER 𓆩✦𓆪
+- DEVELOPER: 𓆩⚔𓆪 FABER 𓆩⚔𓆪

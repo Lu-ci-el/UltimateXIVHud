@@ -12,7 +12,7 @@ body:
     id: version
     attributes:
       label: UXHDのバージョン
-      placeholder: "例：0.4.5.7"
+      placeholder: "例：0.4.5.8"
     validations:
       required: true
   - type: textarea
@@ -46,4 +46,4 @@ body:
     id: attachments
     attributes:
       label: 画面・ログ（任意）
-      description: 必要に応じて画像やログを添付してください。ログは解凍先のMainCore/Logs配下にあります。個人情報・認証情報は除いてください。
+      description: 必要に応じて画像やログを添付してください。個人情報・認証情報は除いてください。
