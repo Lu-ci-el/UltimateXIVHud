@@ -6,7 +6,7 @@ Share FFXIV through OBS, Discord or Discord PTB while keeping supported external
 
 ## Download
 
-[Download the latest version](https://github.com/Lu-ci-el/UltimateXIVHud/releases/download/v0.4.5.8/UltimateXIVHud_0.4.5.8.zip)
+[Download the latest version](https://github.com/Lu-ci-el/UltimateXIVHud/releases/latest)
 
 **Requirements:** Windows x64, DirectX 11 FFXIV, and .NET 8 Desktop Runtime (x64).
 
