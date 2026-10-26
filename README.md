@@ -6,7 +6,7 @@ FFXIVをOBS・Discord・Discord PTBで共有するときに、対応する外部
 
 ## ダウンロード
 
-[最新版をダウンロード](https://github.com/Lu-ci-el/UltimateXIVHud/releases/download/v0.4.5.8/UltimateXIVHud_0.4.5.8.zip)
+[最新版をダウンロード](https://github.com/Lu-ci-el/UltimateXIVHud/releases/latest)
 
 **必要な環境：** Windows x64、DirectX 11版FFXIV、.NET 8 Desktop Runtime（x64）。
 
