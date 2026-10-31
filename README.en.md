@@ -47,12 +47,12 @@ Include the app version, environment, startup order, reproduction steps and symp
 
 ## Support development
 
-If UXHD is useful to you, please consider supporting it through OFUSE. Support is optional.
+If UXHD is useful to you, please consider supporting it through Ko-fi. Support is optional.
 
-[OFUSE](https://ofuse.me/lost) · [Ko-fi](https://ko-fi.com/lost2)
+[Ko-fi](https://ko-fi.com/lost2)
 
 ## Credits
 
-- MASTER: 𓆩†𓆪 𝕷𝖚𝖈𝖎𝖊𝖑 𓆩†𓆪
+- MASTER: 𓆩†𓆪 Luciel 𓆩†𓆪
 - DESIGNER: 𓆩✦𓆪 ASTER 𓆩✦𓆪
 - DEVELOPER: 𓆩⚔𓆪 FABER 𓆩⚔𓆪

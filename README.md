@@ -53,6 +53,6 @@ FF14のバージョンアップ後は使用できなくなります。対応版�
 
 ## 作者
 
-- MASTER：𓆩†𓆪 𝕷𝖚𝖈𝖎𝖊𝖑 𓆩†𓆪
+- MASTER：𓆩†𓆪 Luciel 𓆩†𓆪
 - DESIGNER：𓆩✦𓆪 ASTER 𓆩✦𓆪
 - DEVELOPER：𓆩⚔𓆪 FABER 𓆩⚔𓆪
