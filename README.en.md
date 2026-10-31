@@ -10,14 +10,23 @@ Share FFXIV through OBS, Discord or Discord PTB while keeping supported external
 
 **Requirements:** Windows x64, DirectX 11 FFXIV, and .NET 8 Desktop Runtime (x64).
 
+The application stops working after FFXIV updates.
+
 ## Getting started
 
 1. Extract the entire ZIP into a writable folder of your choice.
-2. Run `UltimateXIVHud.exe`. You can start UXHD before or after FFXIV.
+2. Run `UltimateXIVHud.exe` as administrator. You can start UXHD before or after FFXIV.
 3. Wait for the automatic connection, then select FFXIV in OBS Game Capture or in Discord / Discord PTB game or window sharing.
 4. Check both the preview and the actual stream before using it.
 
 Use **日本語 / English** at the top of the window to change the language.
+
+Two optional settings are available (both default to off):
+
+- **Start automatically with Windows**: starts UXHD with administrator rights when you log on. Run UXHD as administrator to enable or disable this setting.
+- **Start in the system tray**: keeps the window in the tray at startup. Double-click the tray icon to restore it.
+
+When switching to a newer version in another folder, turn automatic startup off and on in the new version to update the registered path.
 
 While the app is waiting, let the game finish starting. If the app asks you to restart FFXIV, restart the game.
 
