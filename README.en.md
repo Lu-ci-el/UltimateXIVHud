@@ -1,4 +1,4 @@
-# UltimateXIVHud (UXHD) 0.4.9.6
+# UltimateXIVHud (UXHD) 0.4.9.8
 
 [日本語](README.md)
 
@@ -10,13 +10,13 @@ Use UXHD to keep GShade out of FFXIV footage shared through OBS, Discord or Disc
 
 Requires Windows x64, DirectX 11 FFXIV, and .NET 8 Desktop Runtime (x64).
 
-This public build is for FFXIV patch 7.58. It will stop working after an FFXIV update.
+The former Friend edition is now the official release. It can start after an FFXIV update and is designed to analyze changes automatically where possible, so GShade can stay out of shared footage.
 
 ## Getting started
 
 1. Extract the entire ZIP into a writable folder of your choice.
 2. **Run UXHD as administrator.**
-3. Whenever possible, start **UXHD → FFXIV → Discord / Discord PTB**, wait for UXHD to connect, and then begin sharing. The stream appeared sooner in this order during testing of version 0.4.9.1.
+3. Whenever possible, start **UXHD → FFXIV → Discord / Discord PTB**, wait for UXHD to connect, and then begin sharing.
 4. **Selecting FFXIV directly as the Discord sharing target also lets you share game audio.** In OBS, select FFXIV in Game Capture. **OBS may be started in either order.**
 5. Check both the preview and the actual stream to confirm that viewers see the intended image.
 
@@ -33,9 +33,7 @@ Minimize-to-tray and a user-defined show/hide shortcut are also available.
 
 When switching to a newer version in another folder, turn automatic startup off and on in the new version to update the registered path. Extract the whole new ZIP into a separate folder. Do not run from inside the ZIP or mix files from different versions.
 
-## Tested scope and streaming
-
-Version 0.4.9.6 was checked offline against the patch 7.58 game files. **In-game operation and streaming on 7.58 have not yet been tested.** GShade was confirmed absent from Discord and Discord PTB streams during testing of version 0.4.9.1.
+## Streaming
 
 **Please use and stream at your own risk.** Behavior can vary with the environment and startup order. Check the preview and an actual stream before broadcasting. UXHD covers OBS Game Capture and Discord / Discord PTB sharing; desktop-wide capture is outside its scope.
 
