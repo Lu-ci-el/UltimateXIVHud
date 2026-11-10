@@ -10,7 +10,7 @@ FFXIVをOBS・Discord・Discord PTBで共有するときに、GShadeを配信映
 
 Windows x64、DirectX 11版FFXIV、.NET 8 Desktop Runtime（x64）が必要です。
 
-FFXIVの更新後も起動できる従来のフレンド版を、今回から公式版にしました。ゲーム側の変更をできるだけ自動で解析し、GShadeを配信映像から外せるように調整しています。
+FFXIVの更新後もUXHDを起動できるようにしました。ゲーム側の変更をできるだけ自動で解析し、GShadeを配信映像から外せるように調整しています。
 
 ## 使い方
 

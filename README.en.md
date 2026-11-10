@@ -10,7 +10,7 @@ Use UXHD to keep GShade out of FFXIV footage shared through OBS, Discord or Disc
 
 Requires Windows x64, DirectX 11 FFXIV, and .NET 8 Desktop Runtime (x64).
 
-The former Friend edition is now the official release. It can start after an FFXIV update and is designed to analyze changes automatically where possible, so GShade can stay out of shared footage.
+UXHD can start after an FFXIV update. It is designed to analyze changes automatically where possible and keep GShade out of shared footage.
 
 ## Getting started
 
